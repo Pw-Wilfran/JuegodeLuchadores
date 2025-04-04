@@ -11,12 +11,12 @@ package juego_mortalkumbia;
 public abstract class Peleador {
     
     protected String nombre;
-    protected int PH;
+    protected int HP;
     protected int ATK;
 
-    public Peleador(String nombre, int PH, int ATK) {
+    public Peleador(String nombre, int HP, int ATK) {
         this.nombre = nombre;
-        this.PH = PH;
+        this.HP = HP;
         this.ATK = ATK;
     }
 
@@ -25,16 +25,20 @@ public abstract class Peleador {
     }
     
     public boolean estaVivo() { 
-        return PH > 0; 
+        return HP > 0; 
     }
 
     public void recibirDanio(int danio) {
-        this.PH -= danio;
-        System.out.println(this.nombre + " recibe " + danio + " de daño. PH restante: " + this.PH); 
+        if(this.HP < danio){
+            this.HP = 0;
+        } else {
+            this.HP -= danio;
+        }
+        System.out.println(this.nombre + " recibe " + danio + " de daño. PH restante: " + this.HP); 
      }
 
     public void mostrar() {
-        System.out.println("PH: " + PH);
+        System.out.println("PH: " + HP);
         System.out.println("ATK: " + ATK);
     }
 

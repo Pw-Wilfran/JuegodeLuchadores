@@ -15,19 +15,19 @@ public class Juego_MortalKumbia {
         Peleador jugador1;
 
         switch (select) {
-            case 1 -> jugador1 = new Paladin("Otto", 55, 12);
-            case 2 -> jugador1 = new Espadachin("Tashingi", 50, 15);
-            case 3 -> jugador1 = new Hechicero("Meridio", 50, 16);
-            default -> jugador1 = new Paladin("Otto", 55, 12);
+            case 1 -> jugador1 = new Paladin("Otto", 1000, 120);
+            case 2 -> jugador1 = new Espadachin("Tashingi", 1000, 130);
+            case 3 -> jugador1 = new Hechicero("Meridio", 1000, 100);
+            default -> jugador1 = new Paladin("Otto", 1000, 120);
         }
 
         Peleador jugador2;
         int enemigo = random.nextInt(3) + 1;
         switch (enemigo) {
-            case 1 -> jugador2 = new Paladin("Otto", 55, 12);
-            case 2 -> jugador2 = new Espadachin("Tashingi", 50, 15);
-            case 3 -> jugador2 = new Hechicero("Meridio", 50, 16);
-            default -> jugador2 = new Hechicero("Meridio", 50, 16);
+            case 1 -> jugador2 = new Paladin("Otto", 1000, 120);
+            case 2 -> jugador2 = new Espadachin("Tashingi", 1000, 130);
+            case 3 -> jugador2 = new Hechicero("Meridio", 1000, 100);
+            default -> jugador2 = new Hechicero("Meridio", 1000, 120);
         }
 
         System.out.println("\nTu personaje:\n" + jugador1.getNombre() + " de Clase (" + jugador1.getClass().getSimpleName() + ")");

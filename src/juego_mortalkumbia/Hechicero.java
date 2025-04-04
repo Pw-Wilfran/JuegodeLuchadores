@@ -43,7 +43,7 @@ class Hechicero extends Peleador implements Mago, Arquero {
     @Override
     public void lanzarHechizo(Peleador enemigo) {
         System.out.println(nombre + " lanza un hechizo magico a " + enemigo.getNombre());
-        enemigo.recibirDanio(ATK + 3);
+        enemigo.recibirDanio(ATK + 30);
     }
 
     @Override
@@ -54,12 +54,12 @@ class Hechicero extends Peleador implements Mago, Arquero {
     @Override
     public void dispararFlecha(Peleador enemigo) {
         System.out.println(nombre + " dispara una flecha mágica a " + enemigo.getNombre());
-        enemigo.recibirDanio(ATK - 2);
+        enemigo.recibirDanio(ATK - 20);
     }
 
     @Override
     public void cargarDisparo(Peleador enemigo) {
         System.out.println(nombre + " carga un disparo mágico potenciado");
-        enemigo.recibirDanio(ATK + 5);
+        enemigo.recibirDanio(ATK + 50);
     }
 }

@@ -54,13 +54,13 @@ class Espadachin extends Peleador implements Guerrero, Arquero {
     @Override
     public void aumentarFuerza() {
         System.out.println(nombre + " aumenta su fuerza temporalmente");
-        ATK += 3;
+        ATK += 30;
     }
 
     @Override
     public void dispararFlecha(Peleador enemigo) {
         System.out.println(nombre + " dispara una flecha a " + enemigo.getNombre());
-        enemigo.recibirDanio(ATK - 2);
+        enemigo.recibirDanio(ATK - 20);
     }
 
     @Override

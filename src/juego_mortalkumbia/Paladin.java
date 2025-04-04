@@ -67,6 +67,6 @@ class Paladin extends Peleador implements Guerrero, Mago {
     @Override
     public void aumentarFuerza() {
         System.out.println(nombre + " se fortalece");
-        ATK += 3;
+        ATK += 30;
     }
 }
